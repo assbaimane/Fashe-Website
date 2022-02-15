@@ -29,7 +29,7 @@ function Header(props){
                     </ul>
                     </div>
                     <button>Fav</button>
-                    <button onClick={}><i className="fa-solid fa-bag-shopping"></i></button>
+                    <button><i className="fa-solid fa-bag-shopping"></i></button>
                 </div>
             </nav>
         </div>

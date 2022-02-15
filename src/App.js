@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.sass';
+import Header from './components/Header/Header'
 
 
 function App() {
@@ -11,7 +12,9 @@ function App() {
 
   // --------------------------- DISPLAY ------------------------
   return (
-    <div></div>
+    <div>
+      <Header/>
+    </div>
   );
 }
 
