@@ -56,7 +56,7 @@ function Home(){
         </div>
 
         {/* //---------------------- COMING SOON ----------------------- */}
-        <div id ="ComingSoon" className="row mt-3 mb-3">
+        <div id ="ComingSoon" className="row mt-3 mb-3 mx-0">
             <div className="col-3">
                 <img className="img-fluid" src={ComingSoon1}></img>
                 <button className="bg-white text-dark">COMING SOON</button>
