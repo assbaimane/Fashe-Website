@@ -4,7 +4,7 @@
         "name" : "Charcoal Backpack",
         "price" : 50,
         "category" : "Accessories",
-        "src" : "../images/Product/Items/item-1.jpg.webp"
+        "src" : "../../images/Product/Items/item-1.jpg.webp"
     },
     {
         "id" : 2,
