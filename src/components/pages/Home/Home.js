@@ -11,8 +11,7 @@ import ComingSoon3 from '../../../images/Home/ComingSoon/cs-03.jpg.webp'
 
 function Home(){
     let products = require("../../../data/products.json")
-    // products.splice(0,4)
-    // --------------------------- FUNCTIONS ------------------------
+    products.splice(0,4) 
 
     //-------------------------- DISPLAY -------------------------
     return(
@@ -56,16 +55,16 @@ function Home(){
         </div>
 
         {/* //---------------------- COMING SOON ----------------------- */}
-        <div id ="ComingSoon" className="row mt-3 mb-3 mx-0">
-            <div className="col-3">
+        <div id ="ComingSoon" className="row container mt-3 mb-3 mx-0 mx-auto">
+            <div className="col-4">
                 <img className="img-fluid" src={ComingSoon1}></img>
                 <button className="bg-white text-dark">COMING SOON</button>
             </div>
-            <div className="col-3">
+            <div className="col-4">
                 <img className="img-fluid" src={ComingSoon2}></img>
                 <button className="bg-white text-dark">COMING SOON</button>
             </div>
-            <div className="col-3">
+            <div className="col-4">
                 <img className="img-fluid" src={ComingSoon3}></img>
                 <button className="bg-white text-dark">COMING SOON</button>
             </div>
@@ -82,18 +81,25 @@ function Home(){
                     <li>Old</li>
                 </ul>
             </div>
-
-        {/* -------------- Products -------------- */}
-        <div className="row">
-            {products.map((element) => 
-                <Card 
-                    key = {element.id}
-                    img = {element.src}
-                    title = {element.name}
-                    price = {element.price}
-                />
-            )}
+            {/* -------------- Products -------------- */}
+            <div className="row">
+                {products.map((element) => 
+                    <Card 
+                        key = {element.id}
+                        img = {element.src}
+                        title = {element.name}
+                        price = {element.price}
+                    />
+                )}
+            </div>
         </div>
+
+        {/* //------------------- HOME FOOTER BANNER -------------------- */}
+        <div id ="HomeBanner" className="row text-light text-center mx-0">
+            <div>
+                <h2>The Beauty<br></br>LOOKBOOK</h2>
+                <p><i class="fa-solid fa-play"></i> PLAY VIDEO</p>
+            </div>
         </div>
         </>
     );
