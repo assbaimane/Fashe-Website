@@ -49,7 +49,7 @@
     },
     {
         "id" : 9,
-        "name" : "White Shite",
+        "name" : "White Shirt",
         "price" : 25,
         "category" : "Women"
     },
@@ -61,7 +61,7 @@
     },
     {
         "id" : 11,
-        "name" : "Charchoal Sweatpants",
+        "name" : "Charcoal Sweatpants",
         "price" : 50,
         "category" : "Women"
     },
