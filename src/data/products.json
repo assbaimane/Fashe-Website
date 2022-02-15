@@ -4,83 +4,83 @@
         "name" : "Charcoal Backpack",
         "price" : 50,
         "category" : "Accessories",
-        "src" : "../../images/Product/Items/item-01.jpg.webp"
+        "src" : "./img/Product/Items/item-01.jpg.webp"
     },
     {
         "id" : 2,
         "name" : "Vintage Traveler's Backpack",
         "price" : 75,
         "category" : "Accessories",
-        "src" : "../images/Product/Items/item-02.jpg.webp"
+        "src" : "./img/Product/Items/item-02.jpg.webp"
     },
     {
         "id" : 3,
         "name" : "Jean Jacket",
         "price" : 95,
         "category" : "Women",
-        "src" : "../images/Product/Items/item-3.jpg.webp"
+        "src" : "./img/Product/Items/item-03.jpg.webp"
     },
     {
         "id" : 4,
         "name" : "Converse Sneakers",
         "price" : 55,
         "category" : "Kids",
-        "src" : "../images/Product/Items/item-4.jpg.webp"
+        "src" : "./img/Product/Items/item-04.jpg.webp"
     },
     {
         "id" : 5,
         "name" : "Midnight Watch",
         "price" : 125,
         "category" : "Accessories",
-        "src" : "../images/Product/Items/item-5.jpg.webp"
+        "src" : "./img/Product/Items/item-05.jpg.webp"
     },
     {
         "id" : 6,
         "name" : "White Kicks",
         "price" : 45,
         "category" : "Kids",
-        "src" : "../images/Product/Items/item-6.jpg.webp"
+        "src" : "./img/Product/Items/item-06.jpg.webp"
     },
     {
         "id" : 7,
         "name" : "Ripped Jean Shorts",
         "price" : 95,
         "category" : "Mens",
-        "src" : "../images/Product/Items/item-7.jpg.webp"
+        "src" : "./img/Product/Items/item-07.jpg.webp"
     },
     {
         "id" : 8,
         "name" : "Leather Wrist Watch",
         "price" : 150,
         "category" : "Accessories",
-        "src" : "../images/Product/Items/item-8.jpg.webp"
+        "src" : "./img/Product/Items/item-08.jpg.webp"
     },
     {
         "id" : 9,
         "name" : "White Shirt",
         "price" : 25,
         "category" : "Women",
-        "src" : "../images/Product/Items/item-9.jpg.webp"
+        "src" : "./img/Product/Items/item-09.jpg.webp"
     },
     {
         "id" : 10,
         "name" : "Grey Shirt",
         "price" : 35,
         "category" : "Women",
-        "src" : "../images/Product/Items/item-10.jpg.webp"
+        "src" : "./img/Product/Items/item-10.jpg.webp"
     },
     {
         "id" : 11,
         "name" : "Charcoal Sweatpants",
         "price" : 50,
         "category" : "Women",
-        "src" : "../images/Product/Items/item-11.jpg.webp"
+        "src" : "./img/Product/Items/item-11.jpg.webp"
     },
     {
         "id" : 12,
         "name" : "Slim-Leg Jeans",
         "price" : 65,
         "category" : "Women",
-        "src" : "../images/Product/Items/item-12.jpg.webp"
+        "src" : "./img/Product/Items/item-12.jpg.webp"
     }
 ]

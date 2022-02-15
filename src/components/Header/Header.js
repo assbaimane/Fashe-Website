@@ -27,7 +27,7 @@ function Header(){
                         </li>
                     </ul>
                     </div>
-                    <button><i class="fa-solid fa-heart"></i></button>
+                    <button><i className="fa-solid fa-heart"></i></button>
                     <button><i className="fa-solid fa-bag-shopping"></i></button>
                 </div>
             </nav>
