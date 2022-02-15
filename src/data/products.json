@@ -1,0 +1,74 @@
+[
+    {
+        "id" : 1,
+        "name" : "Charcoal Backpack",
+        "price" : 50,
+        "category" : "Accessories"
+    },
+    {
+        "id" : 2,
+        "name" : "Vintage Traveler's Backpack",
+        "price" : 75,
+        "category" : "Accessories"
+    },
+    {
+        "id" : 3,
+        "name" : "Jean Jacket",
+        "price" : 95,
+        "category" : "Women"
+    },
+    {
+        "id" : 4,
+        "name" : "Converse Sneakers",
+        "price" : 55,
+        "category" : "Kids"
+    },
+    {
+        "id" : 5,
+        "name" : "Midnight Watch",
+        "price" : 125,
+        "category" : "Accessories"
+    },
+    {
+        "id" : 6,
+        "name" : "White Kicks",
+        "price" : 45,
+        "category" : "Kids"
+    },
+    {
+        "id" : 7,
+        "name" : "Ripped Jean Shorts",
+        "price" : 95,
+        "category" : "Mens"
+    },
+    {
+        "id" : 8,
+        "name" : "Leather Wrist Watch",
+        "price" : 150,
+        "category" : "Accessories"
+    },
+    {
+        "id" : 9,
+        "name" : "White Shite",
+        "price" : 25,
+        "category" : "Women"
+    },
+    {
+        "id" : 10,
+        "name" : "Grey Shirt",
+        "price" : 35,
+        "category" : "Women"
+    },
+    {
+        "id" : 11,
+        "name" : "Charchoal Sweatpants",
+        "price" : 50,
+        "category" : "Women"
+    },
+    {
+        "id" : 12,
+        "name" : "Slim-Leg Jeans",
+        "price" : 65,
+        "category" : "Women"
+    }
+]
