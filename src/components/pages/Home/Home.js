@@ -1,17 +1,23 @@
 import './Home.sass';
+import Card from '../../Card/Card'
 import {useEffect} from 'react';
 import '../../../../node_modules/bootstrap/dist/js/bootstrap'
 import Slide1 from '../../../images/Home/Carousel/carousel-01.jpg.webp'
 import Slide2 from '../../../images/Home/Carousel/carousel-02.jpg.webp'
 import Slide3 from '../../../images/Home/Carousel/carousel-03.jpg.webp'
-
+import ComingSoon1 from '../../../images/Home/ComingSoon/cs-01.jpg.webp'
+import ComingSoon2 from '../../../images/Home/ComingSoon/cs-02.jpg.webp'
+import ComingSoon3 from '../../../images/Home/ComingSoon/cs-03.jpg.webp'
 
 function Home(){
+    let products = require("../../../data/products.json");
+    
     // --------------------------- FUNCTIONS ------------------------
 
     //-------------------------- DISPLAY -------------------------
     return(
-        //---------------------- CAROUSSEL -----------------------
+        <>
+        {/* //---------------------- CAROUSSEL ----------------------- */}
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -48,6 +54,46 @@ function Home(){
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+
+        {/* //---------------------- COMING SOON ----------------------- */}
+        <div id ="ComingSoon" className="row mt-3 mb-3">
+            <div className="col-3">
+                <img className="img-fluid" src={ComingSoon1}></img>
+                <button className="bg-white text-dark">COMING SOON</button>
+            </div>
+            <div className="col-3">
+                <img className="img-fluid" src={ComingSoon2}></img>
+                <button className="bg-white text-dark">COMING SOON</button>
+            </div>
+            <div className="col-3">
+                <img className="img-fluid" src={ComingSoon3}></img>
+                <button className="bg-white text-dark">COMING SOON</button>
+            </div>
+        </div>
+
+        {/* //---------------------- OUR PRODUCTS ----------------------- */}
+        <div id ="OurProducts" className="row container mx-auto mt-5 mb-5">
+            <h2 className='text-center'>Our Products</h2>
+            <div className="row">
+                <ul>
+                    <li>Best Seller</li>
+                    <li>New</li>
+                    <li>Sale</li>
+                    <li>Old</li>
+                </ul>
+            </div>
+
+        {/* -------------- Products -------------- */}
+        <div className="row">
+            {products.map((element) => 
+                <Card 
+                    title = {element.name}
+                    price = {element.price}
+                />
+            )}
+        </div>
+        </div>
+        </>
     );
 }
 

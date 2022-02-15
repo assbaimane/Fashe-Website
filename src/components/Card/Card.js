@@ -10,7 +10,11 @@ function Card(props){
     //-------------------- DISPLAY ----------------------
     return(
         <div className="col-3 mx-auto my-auto">
-           
+            <div className="p-3">
+                <img src={props.img} alt={props.title} />
+                <h5>{props.title}</h5>
+                <p>${props.price}.00 </p>
+            </div>
         </div>
     );
 }
