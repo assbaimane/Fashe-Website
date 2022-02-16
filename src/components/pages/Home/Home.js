@@ -10,8 +10,32 @@ import ComingSoon2 from '../../../images/Home/ComingSoon/cs-02.jpg.webp'
 import ComingSoon3 from '../../../images/Home/ComingSoon/cs-03.jpg.webp'
 
 function Home(){
-    let products = require("../../../data/products.json")
-    products.splice(0,4) 
+    let products = require("../../../data/products.json");
+    products.splice(0,4);
+    var currentProduct = "BestSeller";
+
+    let sortState = (state) => {
+        if (state == "BestSeller"){
+            currentProduct = "BestSeller";
+            return currentProduct;
+        }
+        else if (state == "New"){
+            currentProduct = "New";
+            return currentProduct;
+        }
+        else if(state == "Sale"){
+            currentProduct = "Sale";
+            return currentProduct;
+        }
+        else if(state == "Old"){
+            currentProduct = "Old";
+            return currentProduct;
+        }
+        else{
+            currentProduct = "BestSeller"
+            console.log("Pay Attention, no state found")
+        }
+    }
 
     //-------------------------- DISPLAY -------------------------
     return(
@@ -75,21 +99,24 @@ function Home(){
             <h2 className='text-center'>Our Products</h2>
             <div className="row">
                 <ul>
-                    <li>Best Seller</li>
-                    <li>New</li>
-                    <li>Sale</li>
-                    <li>Old</li>
+                    <li onClick={() => sortState("BestSeller")}>Best Seller</li>
+                    <li onClick={() => sortState("New")}>New</li>
+                    <li onClick={() => sortState("Sale")}>Sale</li>
+                    <li onClick={() => sortState("Old")}>Old</li>
                 </ul>
             </div>
             {/* -------------- Products -------------- */}
             <div className="row">
                 {products.map((element) => 
-                    <Card 
-                        key = {element.id}
-                        img = {element.src}
-                        title = {element.name}
-                        price = {element.price}
-                    />
+                    {sortState("BestSeller") == "BestSeller" &&
+                        <Card 
+                            key = {element.id}
+                            img = {element.src}
+                            title = {element.name}
+                            price = {element.price}
+                        />
+                        {alert(sortState())}
+                    }
                 )}
             </div>
         </div>

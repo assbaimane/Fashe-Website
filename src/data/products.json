@@ -4,6 +4,7 @@
         "name" : "Charcoal Backpack",
         "price" : 50,
         "category" : "Accessories",
+        "state" : "BestSeller",
         "src" : "./img/Product/Items/item-01.jpg.webp"
     },
     {
@@ -11,6 +12,7 @@
         "name" : "Vintage Traveler's Backpack",
         "price" : 75,
         "category" : "Accessories",
+        "state" : "New",
         "src" : "./img/Product/Items/item-02.jpg.webp"
     },
     {
@@ -18,6 +20,7 @@
         "name" : "Jean Jacket",
         "price" : 95,
         "category" : "Women",
+        "state" : "Sale",
         "src" : "./img/Product/Items/item-03.jpg.webp"
     },
     {
@@ -25,6 +28,7 @@
         "name" : "Converse Sneakers",
         "price" : 55,
         "category" : "Kids",
+        "state" : "Old",
         "src" : "./img/Product/Items/item-04.jpg.webp"
     },
     {
@@ -32,6 +36,7 @@
         "name" : "Midnight Watch",
         "price" : 125,
         "category" : "Accessories",
+        "state" : "BestSeller",
         "src" : "./img/Product/Items/item-05.jpg.webp"
     },
     {
@@ -39,6 +44,7 @@
         "name" : "White Kicks",
         "price" : 45,
         "category" : "Kids",
+        "state" : "New",
         "src" : "./img/Product/Items/item-06.jpg.webp"
     },
     {
@@ -46,6 +52,7 @@
         "name" : "Ripped Jean Shorts",
         "price" : 95,
         "category" : "Mens",
+        "state" : "Sale",
         "src" : "./img/Product/Items/item-07.jpg.webp"
     },
     {
@@ -53,6 +60,7 @@
         "name" : "Leather Wrist Watch",
         "price" : 150,
         "category" : "Accessories",
+        "state" : "Old",
         "src" : "./img/Product/Items/item-08.jpg.webp"
     },
     {
@@ -60,6 +68,7 @@
         "name" : "White Shirt",
         "price" : 25,
         "category" : "Women",
+        "state" : "BestSeller",
         "src" : "./img/Product/Items/item-09.jpg.webp"
     },
     {
@@ -67,6 +76,7 @@
         "name" : "Grey Shirt",
         "price" : 35,
         "category" : "Women",
+        "state" : "New",
         "src" : "./img/Product/Items/item-10.jpg.webp"
     },
     {
@@ -74,6 +84,7 @@
         "name" : "Charcoal Sweatpants",
         "price" : 50,
         "category" : "Women",
+        "state" : "Sale",
         "src" : "./img/Product/Items/item-11.jpg.webp"
     },
     {
@@ -81,6 +92,7 @@
         "name" : "Slim-Leg Jeans",
         "price" : 65,
         "category" : "Women",
+        "state" : "Old",
         "src" : "./img/Product/Items/item-12.jpg.webp"
     }
 ]
