@@ -100,7 +100,7 @@
         "name" : "Floral Dress",
         "price" : 85,
         "category" : "Women",
-        "state" : "Old",
+        "state" : "BestSeller",
         "src" : "./img/Product/Items/item-13.jpg.webp"
     },
     {
@@ -108,7 +108,7 @@
         "name" : "Striped Polo",
         "price" : 75,
         "category" : "Mens",
-        "state" : "Old",
+        "state" : "New",
         "src" : "./img/Product/Items/item-14.jpg.webp"
     },
     {
@@ -116,7 +116,7 @@
         "name" : "Wayfarer Sunglasses",
         "price" : 185,
         "category" : "Accessories",
-        "state" : "Old",
+        "state" : "Sale",
         "src" : "./img/Product/Items/item-15.jpg.webp"
     },
     {
