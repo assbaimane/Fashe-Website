@@ -15,16 +15,16 @@ function Header(){
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#"><Link to="/">Home</Link></a>
+                        <a className="nav-link active" aria-current="page"><Link to="/">Home</Link></a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" href="#"><Link to="/products">Products</Link></a>
+                        <a className="nav-link"><Link to="/products">Products</Link></a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" href="#"><Link to="/about">About</Link></a>
+                        <a className="nav-link"><Link to="/about">About</Link></a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" href="#"><Link to="/contact">Contact</Link></a>
+                        <a className="nav-link"><Link to="/contact">Contact</Link></a>
                         </li>
                     </ul>
                     </div>
