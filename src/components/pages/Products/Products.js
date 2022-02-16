@@ -1,11 +1,17 @@
 import './Products.sass';
 import Card from '../../Card/Card';
+import { useState } from 'react';
 
 function Products(){
     //-------------------------- VARIABLES -------------------------
     let products = require("../../../data/products.json");
+    const [currentCategory, setCurrentCategory] = useState("All");
 
     //-------------------------- FUNCTIONS -------------------------
+    let sortCategory = (category) => {
+        setCurrentCategory(category);
+    }
+
     //-------------------------- DISPLAY -------------------------
     return(
        <>
@@ -25,11 +31,11 @@ function Products(){
                         <div className="categories m-3">
                             <h3>Categories</h3>
                             <ul>
-                                <li>All</li>
-                                <li>Women</li>
-                                <li>Kids</li>
-                                <li>Men</li>
-                                <li>Accessoire</li>
+                                <li onClick={() => sortCategory("All")}>All</li>
+                                <li onClick={() => sortCategory("Women")}>Women</li>
+                                <li onClick={() => sortCategory("Kids")}>Kids</li>
+                                <li onClick={() => sortCategory("Mens")}>Men</li>
+                                <li onClick={() => sortCategory("Accessories")}>Accessoire</li>
                             </ul>
                         </div>
 
@@ -46,7 +52,21 @@ function Products(){
                     {/* ----------- Products card ----------- */}
                     <div className="col-9">
                         <div className="row">
-                            {products.map((element) => {
+                            {/* --------- All category ---------- */}
+                            {products.filter(elem => elem.category === currentCategory).map((element) => {
+                                return (
+                                    <Card
+                                        key={element.id}
+                                        display={"col-4"}
+                                        img={element.src}
+                                        title={element.name}
+                                        price={element.price}
+                                    />
+                                )})
+                            }
+
+                            {/* --------- Specific Category ---------- */}
+                            {(currentCategory == "All") && products.map((element) => {
                                 return (
                                     <Card
                                         key={element.id}
