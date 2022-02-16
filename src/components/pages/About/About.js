@@ -1,6 +1,5 @@
 import './About.sass';
 import {useEffect} from 'react';
-import aboutBanner from '../../../images/About/banner-about.jpg.webp'
 import aboutPhoto from '../../../images/About/about.jpg.webp'
 
 
