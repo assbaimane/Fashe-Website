@@ -94,5 +94,37 @@
         "category" : "Women",
         "state" : "Old",
         "src" : "./img/Product/Items/item-12.jpg.webp"
+    },
+    {
+        "id" : 13,
+        "name" : "Floral Dress",
+        "price" : 85,
+        "category" : "Women",
+        "state" : "Old",
+        "src" : "./img/Product/Items/item-13.jpg.webp"
+    },
+    {
+        "id" : 14,
+        "name" : "Striped Polo",
+        "price" : 75,
+        "category" : "Mens",
+        "state" : "Old",
+        "src" : "./img/Product/Items/item-14.jpg.webp"
+    },
+    {
+        "id" : 15,
+        "name" : "Wayfarer Sunglasses",
+        "price" : 185,
+        "category" : "Accessories",
+        "state" : "Old",
+        "src" : "./img/Product/Items/item-15.jpg.webp"
+    },
+    {
+        "id" : 16,
+        "name" : "Keds",
+        "price" : 65,
+        "category" : "Women",
+        "state" : "Old",
+        "src" : "./img/Product/Items/item-16.jpg.webp"
     }
 ]
