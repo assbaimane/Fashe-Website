@@ -11,10 +11,14 @@ function Products(){
        <>
             {/* //---------------------- BANNER ----------------------- */}
             <div id='ProductsBanner'>
+                <div className='text-center'>
+                    <h1>Product</h1>
+                    <p>New Arrivals Women Collection</p>
+                </div>
             </div>
 
             {/* //---------------------- PRODUCTS ----------------------- */}
-            <div id='ProductsBody' className='container'>
+            <div id='ProductsBody' className='container mt-5'>
                 <div className="row">
                     {/* ------ Categories and Filters ------ */}
                     <div className="col-3">
