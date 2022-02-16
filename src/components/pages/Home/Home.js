@@ -1,6 +1,6 @@
 import './Home.sass';
 import Card from '../../Card/Card';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import '../../../../node_modules/bootstrap/dist/js/bootstrap';
 import Slide1 from '../../../images/Home/Carousel/carousel-01.jpg.webp';
 import Slide2 from '../../../images/Home/Carousel/carousel-02.jpg.webp';
@@ -96,6 +96,7 @@ function Home() {
                         return (
                             <Card
                                 key={element.id}
+                                display={"col-3"}
                                 img={element.src}
                                 title={element.name}
                                 price={element.price}
