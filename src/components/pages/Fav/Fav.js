@@ -1,4 +1,4 @@
-import './Cart.sass';
+import './Fav.sass';
 import {useEffect} from 'react';
 
 
@@ -9,9 +9,8 @@ function Fav(){
     //-------------------------- DISPLAY -------------------------
     return(
         <div>
-
-        
-        </div>
+           <h1>FAVSSSSSS</h1>
+       </div>
     );
 }
 

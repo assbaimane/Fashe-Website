@@ -1,15 +1,15 @@
-import './Cart.sass';
+import './About.sass';
 import {useEffect} from 'react';
 
 
-function About(props){
+function About(){
     
     // --------------------------- FUNCTIONS ------------------------
 
     //-------------------------- DISPLAY -------------------------
     return(
         <div>
-        
+           <h1>ABOOOOOOOUT</h1>
         </div>
     );
 }

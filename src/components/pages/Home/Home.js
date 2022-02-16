@@ -115,7 +115,6 @@ function Home(){
                             title = {element.name}
                             price = {element.price}
                         />
-                        {alert(sortState())}
                     }
                 )}
             </div>

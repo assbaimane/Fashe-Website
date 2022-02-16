@@ -1,5 +1,6 @@
 import './Header.sass';
 import Logo from '../../images/logo.png.webp'
+import { Link } from 'react-router-dom';
 
 function Header(){
 
@@ -14,21 +15,21 @@ function Header(){
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#">Home</a>
+                        <a className="nav-link active" aria-current="page" href="#"><Link to="/">Home</Link></a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link" href="#">Product</a>
+                        <a className="nav-link" href="#"><Link to="/products">Products</Link></a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">About</a>
+                        <a className="nav-link" href="#"><Link to="/about">About</Link></a>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">Contact</a>
+                        <a className="nav-link" href="#"><Link to="/contact">Contact</Link></a>
                         </li>
                     </ul>
                     </div>
-                    <button><i className="fa-solid fa-heart"></i></button>
-                    <button><i className="fa-solid fa-bag-shopping"></i></button>
+                    <button><Link to="/fav"><i className="fa-solid fa-heart"></i></Link></button>
+                    <button><Link to="/cart"><i className="fa-solid fa-bag-shopping"></i></Link></button>
                 </div>
             </nav>
         </div>

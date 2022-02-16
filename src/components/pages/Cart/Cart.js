@@ -2,19 +2,14 @@ import './Cart.sass';
 import {useEffect} from 'react';
 
 
-function Cart(props){
+function Cart(){
     
     // --------------------------- FUNCTIONS ------------------------
 
     //-------------------------- DISPLAY -------------------------
     return(
         <div>
-        {/* ------- EMPTY BAG ------- */}
-
-
-        {/* ------ COMPLETED BAG ------ */}
-
-        
+           <h1>CONTAAAAAACT</h1>
         </div>
     );
 }

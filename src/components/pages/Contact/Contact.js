@@ -1,4 +1,4 @@
-import './Cart.sass';
+import './Contact.sass';
 import {useEffect} from 'react';
 
 
@@ -9,8 +9,7 @@ function Contact(props){
     //-------------------------- DISPLAY -------------------------
     return(
         <div>
-
-        
+           <h1>CONTAAAAACTS</h1>
         </div>
     );
 }
