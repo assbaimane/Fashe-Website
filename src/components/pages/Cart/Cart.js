@@ -9,7 +9,7 @@ function Cart(){
     //-------------------------- DISPLAY -------------------------
     return(
         <div>
-           <h1>CONTAAAAAACT</h1>
+           <h1>CAAAAAAAAAART</h1>
         </div>
     );
 }

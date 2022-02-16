@@ -52,7 +52,7 @@ function Products(){
                     {/* ----------- Products card ----------- */}
                     <div className="col-9">
                         <div className="row">
-                            {/* --------- All category ---------- */}
+                            {/* --------- Filter : All category ---------- */}
                             {products.filter(elem => elem.category === currentCategory).map((element) => {
                                 return (
                                     <Card
@@ -65,7 +65,7 @@ function Products(){
                                 )})
                             }
 
-                            {/* --------- Specific Category ---------- */}
+                            {/* --------- Filter : Specific Category ---------- */}
                             {(currentCategory == "All") && products.map((element) => {
                                 return (
                                     <Card
@@ -77,6 +77,8 @@ function Products(){
                                     />
                                 )})
                             }
+
+                            {/* --------- Search : Specific Item ---------- */}
                         </div>
                     </div>
 
