@@ -12,7 +12,7 @@ function About(){
     return(
         <div>
             <header>
-                <img src={aboutBanner} alt="" />
+                <div className='img'></div>
                 <h1>About</h1>
             </header>
             <div className="about-container">
