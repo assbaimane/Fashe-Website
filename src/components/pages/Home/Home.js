@@ -36,7 +36,7 @@ function Home() {
                     <div className="carousel-item" data-bs-interval="3000">
                         <img src={Slide2} className="d-block w-100" alt="Black sweat"></img>
                         <div className="carousel-caption text-center text-light">
-                            <h1><span>Egyptian Cotton Sweaters</span></h1>
+                            <h1><span>100% Cotton Sweaters</span></h1>
                             <p>New Collection</p>
                             <button href="#" className='bg-white'>SHOP NOW</button>
                         </div>
@@ -62,15 +62,15 @@ function Home() {
 
             {/* //---------------------- COMING SOON ----------------------- */}
             <div id="ComingSoon" className="row container mt-3 mb-3 mx-0 mx-auto">
-                <div className="ComingSoonItems col-4">
+                <div className="ComingSoonItems col-12 col-md-4 pt-4">
                     <img id='watch' className="img-fluid" src={ComingSoon1}></img>
                     <button className="bg-white text-dark">COMING SOON</button>
                 </div>
-                <div className="ComingSoonItems col-4">
+                <div className="ComingSoonItems col-12 col-md-4 pt-4">
                     <img className="img-fluid" src={ComingSoon2}></img>
                     <button className="bg-white text-dark">COMING SOON</button>
                 </div>
-                <div className="ComingSoonItems col-4">
+                <div className="ComingSoonItems col-12 col-md-4 pt-4">
                     <img id='sunglasses' className="img-fluid" src={ComingSoon3}></img>
                     <button className="bg-white text-dark">COMING SOON</button>
                 </div>
@@ -78,10 +78,10 @@ function Home() {
 
             {/* //---------------------- OUR PRODUCTS ----------------------- */}
             <div id="OurProducts" className="row container mx-auto mt-5 mb-5">
-                <h2 className='text-center'>Our Products</h2>
+                <h2 className='text-center mt-5 mt-md-0 mb-3 mb-md-0'>Our Products</h2>
 
                 {/* ---------------- Filters ---------------- */}
-                <div className="OurProductsNav row">
+                <div className="OurProductsNav row mb-3 mb-md-0">
                     <ul>
                         <li onClick={() => sortState("BestSeller")} className={(currentProduct === "BestSeller") ? 'active' : null}>Best Seller</li>
                         <li onClick={() => sortState("New")} className={(currentProduct === "New") ? 'active' : null}>New</li>
@@ -96,7 +96,7 @@ function Home() {
                         return (
                             <Card
                                 key={element.id}
-                                display={"col-3"}
+                                display={"col-12 col-md-3 pb-4 pb-md-0"}
                                 img={element.src}
                                 title={element.name}
                                 price={element.price}
