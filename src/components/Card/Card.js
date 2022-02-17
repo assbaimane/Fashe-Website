@@ -7,7 +7,7 @@ function Card(props){
             <div className="product-card">
                 <img className="img-fluid" src={props.img} alt={props.title} />
                 <div id="card-hover">
-                    <button id='cart'>Add to Cart</button>
+                    <button id='add-to-cart'>Add to Cart</button>
                     <button id='heart'><i className="fa-solid fa-heart"></i></button>
                 </div>
             </div>
