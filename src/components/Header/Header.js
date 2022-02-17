@@ -1,9 +1,20 @@
 import './Header.sass';
 import Logo from '../../images/logo.png.webp'
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+
+
 
 function Header(){
+    // --------------- VARIABLES -----------------
+    const [page, setPage] = useState("home");
 
+    // --------------- FUNCTIONS -----------------
+    const navigation = (page) => {
+        setPage(page)
+    };
+
+    // ------------------ VIEW -------------------
     return(
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-white">
@@ -14,17 +25,17 @@ function Header(){
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li className="nav-item active">
-                            <Link className='nav-link' to="/">Home</Link>
+                        <li className="nav-item">
+                            <Link onClick={() => navigation("home")} to="/" className={(page === "home") ? 'active' : null}>Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className='nav-link' to="/products">Products</Link>
+                            <Link onClick={() => navigation("products")} to="products" className={(page === "products") ? 'active' : null}>Products</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className='nav-link' to="/about">About</Link>
+                            <Link onClick={() => navigation("about")} to="about" className={(page === "about") ? 'active' : null}>About</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className='nav-link' to="/contact">Contact</Link>
+                            <Link onClick={() => navigation("contact")} to="contact" className={(page === "contact") ? 'active' : null}>Contact</Link>
                         </li>
                     </ul>
                     </div>
