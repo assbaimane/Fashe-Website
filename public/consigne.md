@@ -53,8 +53,8 @@
     - a carousel with a btn on it which leads to the product page
     X- a filter that filters in relation to product tags (maximum 4 products displayed)
 
-- on the "about" & "contact" page, do as in the images (static)
-- the footer as in the picture (static)
+X- on the "about" & "contact" page, do as in the images (static)
+X- the footer as in the picture (static)
 
 
 
