@@ -14,22 +14,24 @@ function Header(){
                     </button>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                        <a className="nav-link active" aria-current="page"><Link to="/">Home</Link></a>
+                        <li className="nav-item active">
+                            <Link className='nav-link' to="/">Home</Link>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link"><Link to="/products">Products</Link></a>
+                            <Link className='nav-link' to="/products">Products</Link>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link"><Link to="/about">About</Link></a>
+                            <Link className='nav-link' to="/about">About</Link>
                         </li>
                         <li className="nav-item">
-                        <a className="nav-link"><Link to="/contact">Contact</Link></a>
+                            <Link className='nav-link' to="/contact">Contact</Link>
                         </li>
                     </ul>
                     </div>
-                    <button><Link to="/fav"><i className="fa-solid fa-heart"></i></Link></button>
-                    <button><Link to="/cart"><i className="fa-solid fa-bag-shopping"></i></Link></button>
+                    <div className="nav-buttons">
+                        <Link to="/fav"><i className="fa-solid fa-heart"></i></Link>
+                        <Link  id='cart' to="/cart"><i className="fa-solid fa-bag-shopping"></i></Link>
+                    </div>
                 </div>
             </nav>
         </div>

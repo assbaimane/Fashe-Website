@@ -1,3 +1,36 @@
+.navbar
+    padding: 30px
+.navbar-nav
+    padding-right: 50px
+.nav-item
+    .active
+        a
+            color: #e65540
+.nav-link
+    font-family: 'Montserrat', sans-serif
+    font-size: 15px
+    color: #222
+    text-decoration: none
+    padding: 0 15px
+    &:hover
+        color: #222
+        text-decoration: underline
+        //border-bottom: solid 1px rgb(200, 200, 200) 
+.nav-buttons
+    a
+        color: rgb(200, 200, 200)
+        font-size: 20px
+        padding: 0 15px
+#cart
+    position: relative
+    &::after
+        content: ''
+        height: 60%
+        width: .5px
+        position: absolute
+        left: 0
+        top: 30%
+        background: rgb(200, 200, 200)
 .active
     color: orange !important
 button
