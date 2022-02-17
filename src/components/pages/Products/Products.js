@@ -43,7 +43,7 @@ function Products() {
             <div id='ProductsBanner'>
                 <div className='text-center'>
                     <h1>Product</h1>
-                    <p className='d-md-none d-lg-block'>New Arrivals Women Collection</p>
+                    <p className='d-none d-md-block d-lg-block'>New Arrivals Women Collection</p>
                 </div>
             </div>
 
