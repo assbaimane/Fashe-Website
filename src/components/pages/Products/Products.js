@@ -59,7 +59,7 @@ function Products() {
                                 <li onClick={() => sortCategory("Women")}>Women</li>
                                 <li onClick={() => sortCategory("Kids")}>Kids</li>
                                 <li onClick={() => sortCategory("Mens")}>Men</li>
-                                <li onClick={() => sortCategory("Accessories")}>Accessoire</li>
+                                <li onClick={() => sortCategory("Accessories")}>Accessories</li>
                             </ul>
                         </div>
 
@@ -84,7 +84,7 @@ function Products() {
                     </div>
 
                     {/* ----------- Products card ----------- */}
-                    <div className="col-9">
+                    <div className="products col-9">
                         <div className="row">
                             {/* --------- Filter : All category ---------- */}
                             {products.filter(elem => elem.category === currentCategory).map((element) => {
