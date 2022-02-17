@@ -1,3 +1,64 @@
+# E-commerce "Flash."
+
+## Instructions :
+- Technology: React | Hooks
+- Use of components
+- Use of state & useSate, props
+- Use and implementation of several conditional displays
+- Tree must be worked
+- All methods that you find relevant are accepted (linked to React)
+- Create the pages of the "Flashe" site. (in appendix).
+- Private repository: cs_project_react_firstname1_firstname2
+- Mandatory Trello per team
+- You can put the images you want
+ 
+
+## Features
+- Use "React Router Dom" for navigation:
+    X- an "active" class is added to the clicked page
+    - the "heart" and "basket" icons are functional.
+    - When clicking on the basket icon, a dropdown appears with the selected items and a summary of each item + the total price (see image in appendix).
+    - The item number is updated on the basket icon
+    - Via the dropdown, possibility to have access to the basket page
+    - When clicking on the heart icon, you can access the "favorite" page
+
+- Each product:
+    X- has one/several tags (best seller, new, old, sale) and a category (women, men, kids, accessory)
+    - if the product is "new" or "old", a span is added at the top left of the product with the tag in question (see image in appendix)
+    - possibility of activating a "sold". The price (-20%) and the display change automatically.
+    - at the over, possibility of adding the product to my basket (add to cart = 1) + possibility of liking the product so that it is automatically added to the "favorite" page
+    - when you click on the product, a "products-details" page with the product in question and its details is displayed (more details in the next part)
+
+- on the product-detail page is:
+    - the data of the clicked product (image, name, price, description, category)
+    - possibility of adding the product to my basket via the "add to cart" btn + possibility of choosing the quantity
+    - possibility to choose size and color in addition
+
+- on the "product" page is
+    - an alert at the top of the page which shows us the number of products on sale
+    - a filter that sorts according to the categories of each product (a sentence is updated each time with the number of products found)
+    - a search bar that filters with product names
+
+- on the "basket" page is:
+    - all the products added to the basket with their quantities and the total price of each one.
+    - possibility to change the quantity and the price adapts automatically
+    - the final price that the user will have to pay for all the items in the basket
+
+- on the "favorite" page is:
+    - the same result as the "basket" page with two different loans.
+    - the final price of all products is no longer there
+    - an "add" btn which adds the product in question to the basket and removes it from the favorite page
+
+- on the "home" page is:
+    - a carousel with a btn on it which leads to the product page
+    X- a filter that filters in relation to product tags (maximum 4 products displayed)
+
+- on the "about" & "contact" page, do as in the images (static)
+- the footer as in the picture (static)
+
+
+
+
 # E-commerce "Flashe." 
 
 ## Consignes : 

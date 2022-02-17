@@ -1,17 +1,39 @@
+*
+    font-family: 'Montserrat', sans-serif
+.carousel-control-prev
+    opacity: 0
+    &:hover
+        opacity: 1
+.carousel-control-next
+    opacity: 0
+    &:hover
+        opacity: 1
 .carousel-item
     .carousel-caption
         h1
             text-transform: uppercase
-            text-decoration: underline
+            padding-bottom: 10px
+            span
+                border-bottom: 3px solid white
+                font-family: 'Poppins', sans-serif
+                font-size: 50px
+        p
+            font-size: 18px
+            padding-bottom: 20px
         button
             border-radius: 30px
-            padding: 1% 5%
-
+            padding: 1.5% 5%
+            font-size: 16px
+#watch
+    object-fit: cover
+#sunglasses 
+    object-fit: cover
 #ComingSoon,#OurProducts
     display: flex
     justify-content: center
     h2
         text-transform: uppercase
+        font-weight: bold
     ul
         display: flex
         justify-content: center
@@ -20,17 +42,17 @@
             margin: 0% 2%
             list-style-type: none
             color: gray
-        li:active
-            text-decoration: underline
-    .col-4
+            &:hover
+                text-decoration: underline
+    .ComingSoonItems 
         position: relative
         display: flex
         justify-content: center
         button
             position: absolute
             bottom: 3%
-        h5,p
-            color: gray
+            padding: 10px 20px
+            margin-bottom: 10px
 
 #HomeBanner
     background-image: url("../../../images/Home/banner-home.jpg")
@@ -38,3 +60,9 @@
     height: 30vw
     display: flex
     align-items: center
+    background-attachment: fixed
+    h2
+        font-family: 'Poppins', sans-serif
+        span
+            font-family: 'Poppins', sans-serif
+            font-size: 50px
