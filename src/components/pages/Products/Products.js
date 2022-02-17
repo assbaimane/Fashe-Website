@@ -43,7 +43,7 @@ function Products() {
             <div id='ProductsBanner'>
                 <div className='text-center'>
                     <h1>Product</h1>
-                    <p>New Arrivals Women Collection</p>
+                    <p className='d-md-none d-lg-block'>New Arrivals Women Collection</p>
                 </div>
             </div>
 
@@ -51,7 +51,7 @@ function Products() {
             <div id='ProductsBody' className='container mt-5'>
                 <div className="row">
                     {/* ------ Categories and Filters ------ */}
-                    <div className="col-3">
+                    <div className="col-md-3 col-12">
                         <div className="categories m-3">
                             <h3>Categories</h3>
                             <ul>
@@ -63,12 +63,12 @@ function Products() {
                             </ul>
                         </div>
 
-                        {/* ---------- Search Bar ---------- */}
+                        {/* ---------- Filter & Search Bar ---------- */}
                         <div className="filters m-3">
                             <h3>Filter</h3>
 
                             <form action="/" method="get" className='d-flex align-items-center border p-3'>
-                                <div className="col-9 text-truncate d-flex align-items-center">
+                                <div className="col-11 text-truncate d-flex align-items-center">
                                     <input
                                         type="search"
                                         onChange={filter}
@@ -77,21 +77,21 @@ function Products() {
                                         className=' border-0 d-block text-truncate'
                                     />
                                 </div>
-                                <button className='col-3 p-1'><i className="fa-solid fa-magnifying-glass text-center"></i></button>
+                                <button className='col-1 p-0'><i className="fa-solid fa-magnifying-glass text-center"></i></button>
                             </form>
                         </div>
 
                     </div>
 
                     {/* ----------- Products card ----------- */}
-                    <div className="products col-9">
+                    <div className="products col-md-9 col-12">
                         <div className="row">
                             {/* --------- Filter : All category ---------- */}
                             {products.filter(elem => elem.category === currentCategory).map((element) => {
                                 return (
                                     <Card
                                         key={element.id}
-                                        display={"col-4"}
+                                        display={"col-md-4"}
                                         img={element.src}
                                         title={element.name}
                                         price={element.price}
@@ -105,7 +105,7 @@ function Products() {
                                 return (
                                     <Card
                                         key={element.id}
-                                        display={"col-4"}
+                                        display={"col-md-4 pb-4"}
                                         img={element.src}
                                         title={element.name}
                                         price={element.price}
@@ -123,7 +123,7 @@ function Products() {
                                             return (
                                                 <Card
                                                     key={element.id}
-                                                    display={"col-4"}
+                                                    display={"col-4 pb-4"}
                                                     img={element.src}
                                                     title={element.name}
                                                     price={element.price}
