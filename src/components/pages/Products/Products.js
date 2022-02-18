@@ -2,7 +2,7 @@ import './Products.sass';
 import Card from '../../Card/Card';
 import { useState } from 'react';
 
-function Products() {
+function Products(props) {
     //-------------------------- VARIABLES -------------------------
     const products = require("../../../data/products.json");
     const [currentCategory, setCurrentCategory] = useState("All");
@@ -66,7 +66,6 @@ function Products() {
                         {/* ---------- Filter & Search Bar ---------- */}
                         <div className="filters m-3">
                             <h3>Filter</h3>
-
                             <form action="/" method="get" className='d-flex align-items-center border p-3'>
                                 <div className="col-11 text-truncate d-flex align-items-center">
                                     <input
@@ -86,12 +85,14 @@ function Products() {
                     {/* ----------- Products card ----------- */}
                     <div className="products col-md-9 col-12">
                         <div className="row">
-                            {/* --------- Filter : All category ---------- */}
+                            {/* --------- Filter : Specific category ---------- */}
                             {products.filter(elem => elem.category === currentCategory).map((element) => {
                                 return (
                                     <Card
                                         key={element.id}
                                         display={"col-md-4"}
+                                        addToBag = {(param) => props.addToBag(param)}
+                                        item={element}
                                         img={element.src}
                                         title={element.name}
                                         price={element.price}
@@ -100,12 +101,14 @@ function Products() {
                             })
                             }
 
-                            {/* --------- Filter : Specific Category ---------- */}
+                            {/* --------- Filter : All Category ---------- */}
                             {(currentCategory == "All") && products.map((element) => {
                                 return (
                                     <Card
                                         key={element.id}
                                         display={"col-md-4 pb-4"}
+                                        addToBag = {(param) => props.addToBag(param)}
+                                        item={element}
                                         img={element.src}
                                         title={element.name}
                                         price={element.price}
@@ -124,6 +127,8 @@ function Products() {
                                                 <Card
                                                     key={element.id}
                                                     display={"col-4 pb-4"}
+                                                    addToBag = {(param) => props.addToBag(param)}
+                                                    item={element}
                                                     img={element.src}
                                                     title={element.name}
                                                     price={element.price}
@@ -133,7 +138,6 @@ function Products() {
                                     </div>
                                 </div>
                             }
-                        
                         </div>
                     </div>
 
