@@ -41,13 +41,13 @@ function Header(){
                         <Link to="/fav"><i className="fa-solid fa-heart"></i></Link>
                         {/* shopping cart */}
                         <div className="dropdown dropstart btn-group">
-                            <button id='cart' type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                            <button id='cart' type="button" className="btn" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i className="fa-solid fa-bag-shopping"></i>
                             </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="#">IMANE</a></li>
-                                <li><a class="dropdown-item" href="#">IMANE</a></li>
-                                <li><a class="dropdown-item" href="#">IMANE</a></li>
+                            <ul className="dropdown-menu dropdown-menu-end">
+                                <li><a className="dropdown-item" href="#">IMANE</a></li>
+                                <li><a className="dropdown-item" href="#">IMANE</a></li>
+                                <li><a className="dropdown-item" href="#">IMANE</a></li>
                                 <button id='go-to-cart'><Link to="/cart">View Cart</Link></button> 
                             </ul>
                         </div>

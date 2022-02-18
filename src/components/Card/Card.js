@@ -17,7 +17,7 @@ function Card(props){
         <div className="products mx-auto my-auto" className={props.display}>
             <div className="product-card">
                 {/* product status button */}
-                {props.item['state'] === "New" || props.item['state'] === "Old" ? <span>{props.item['state']}</span> : null }
+                {props.item?.state === "New" || props.item?.state === "Old" ? <span>{props.item?.state}</span> : null }
 
                 {/* product photo */}
                 <img className="img-fluid" src={props.img} alt={props.title} />
