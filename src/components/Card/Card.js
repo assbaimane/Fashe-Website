@@ -24,14 +24,14 @@ function Card(props){
                 <div id="card-hover">
                     {/* add to cart button */}
                     <div className="btnContainer">
-                        <button id='addInCart' onClick={(param) => props.addToBag(props.item)}>Add to Cart</button>
+                        <button id='addInCart' onClick={() => props.addToBag(props.item)}>Add to Cart</button>
                     </div>
 
                     {/* like button */}
                     <button id='heart'><i className="fa-solid fa-heart"></i></button>
                 </div>
             </div>
-            <Link to='/products/productDetail' target="_blank">
+            <Link onClick={() => {props.setSelectedProduct(props.item)}} to='/products/productDetail'>
                 <h5>{props.title}</h5>
             </Link>
             <p>${props.price}.00 </p>

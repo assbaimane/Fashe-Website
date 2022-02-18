@@ -96,11 +96,12 @@ function Products(props) {
                                         <Card
                                             key={element.id}
                                             display={"col-md-4"}
-                                            addToBag = {(param) => props.addToBag(param)}
+                                            addToBag = {props.addToBag}
                                             item={element}
                                             img={element.src}
                                             title={element.name}
                                             price={element.price}
+                                            setSelectedProduct={props.setSelectedProduct}
                                         />
                                 )
                             })
@@ -117,6 +118,7 @@ function Products(props) {
                                             img={element.src}
                                             title={element.name}
                                             price={element.price}
+                                            setSelectedProduct={(selected) => props.setSelectedProduct(selected)}
                                         />
                                 )
                             })
@@ -137,6 +139,7 @@ function Products(props) {
                                                     img={element.src}
                                                     title={element.name}
                                                     price={element.price}
+                                                    setSelectedProduct={(selected) => props.setSelectedProduct(selected)}
                                                 />
                                             )}
                                         )}

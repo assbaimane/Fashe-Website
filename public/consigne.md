@@ -24,7 +24,7 @@
 
 - Each product:
     X- has one/several tags (best seller, new, old, sale) and a category (women, men, kids, accessory)
-    - if the product is "new" or "old", a span is added at the top left of the product with the tag in question (see image in appendix)
+    X- if the product is "new" or "old", a span is added at the top left of the product with the tag in question (see image in appendix)
     - possibility of activating a "sold". The price (-20%) and the display change automatically.
     X- at the hover, possibility of adding the product to my basket (add to cart = 1) + possibility of liking the product so that it is automatically added to the "favorite" page
     - when you click on the product, a "products-details" page with the product in question and its details is displayed (more details in the next part)

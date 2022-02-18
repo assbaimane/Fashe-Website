@@ -7,24 +7,27 @@ function ProductDetail(props) {
     //-------------------------- FUNCTIONS -------------------------
 
     //-------------------------- DISPLAY -------------------------
+
+    let params = useParams()
+
     return (
         <>
-            <div>
-                <h2>OLAAAAAAAAAAAAAAAAAAAA</h2>
-            </div>
             <img src="" alt="" />
-            <h1>PRODUCT DETAAAAAIL !</h1>
-            <h2>price</h2>
-            <p>description</p>
-            <div className="product-options">
+            <div className="product-info">
+                <h1>{console.log(props.selectedProduct)}</h1>
+                <h2>{props.selectedProduct.price}</h2>
+                <p>description</p>
                 <div className="product-color">
 
                 </div>
                 <div className="product-size">
 
                 </div>
+                <div className="item-quantity">
+                    <button></button>
+                </div>
+                <button></button>
             </div>
-
         </>
     );
 }

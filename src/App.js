@@ -15,6 +15,7 @@ import Footer from './components/Footer/Footer'
 function App() {
   // --------------------------- DATA ------------------------
   const [shopBag, setShopBag] = useState([])  
+  const [selectedProduct, setSelectedProduct] = useState([])  
 
   // --------------------------- FUNCTIONS ------------------------
   const addToBag = (product) =>{
@@ -31,9 +32,14 @@ function App() {
           <Route path={'/'} element={<Home />}/>
           <Route path={'/products'} element={
               <Products 
-                  addToBag = {(param) => addToBag(param)}
+                  addToBag = {addToBag}
+                  setSelectedProduct = {setSelectedProduct}
               />}/>
-          <Route path={'/products/productDetail'} element={<ProductDetail />} />
+          <Route path={'/products/productDetail'} element={<ProductDetail 
+              selectedProduct = {selectedProduct}
+          />} >
+            <Route path={':id'} />
+          </Route>
           <Route path={'/about'} element={<About />}/>
           <Route path={'/contact'} element={<Contact />}/>
           <Route path={'/fav'} element={<Fav />}/>
