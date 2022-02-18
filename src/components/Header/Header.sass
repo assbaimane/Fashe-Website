@@ -1,5 +1,7 @@
 .navbar
     padding: 40px 30px 30px
+.navbar-brand
+    margin-right: 0
 .navbar-nav
     padding-right: 50px
 .active
@@ -15,20 +17,36 @@
             color: #222
             text-decoration: underline 
 .nav-buttons
-    a
+    display: flex
+    a, button
         color: rgb(200, 200, 200)
         font-size: 20px
         padding: 0 15px
+    .dropdown-menu
+        padding: 10px 5px
+        #go-to-cart
+            background-color: #222
+            text-transform: uppercase
+            border-radius: 50px
+            padding: 5px 10px
+            margin: 10px 0px
+            a  
+                text-decoration: none
+                color: white
+                font-size: 16px
 #cart
     position: relative
+    bottom: 1px
     &::after
         content: ''
-        height: 60%
+        height: 50%
         width: .5px
         position: absolute
         left: 0
         top: 30%
         background: rgb(200, 200, 200)
+    &:focus
+        box-shadow: none
 button
     border: none
     background-color: transparent

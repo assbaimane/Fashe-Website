@@ -18,7 +18,7 @@ function Header(){
     return(
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-white">
-                <div className="container-fluid">
+                <div className="container-fluid flex-nowrap">
                     <a className="navbar-brand" href="#"><img src={Logo} className="img-fluid"></img></a>
                     <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -37,8 +37,21 @@ function Header(){
                         </ul>
                     </div>
                     <div className="nav-buttons">
+                        {/* liked items */}
                         <Link to="/fav"><i className="fa-solid fa-heart"></i></Link>
-                        <Link  id='cart' to="/cart"><i className="fa-solid fa-bag-shopping"></i></Link> 
+                        {/* shopping cart */}
+                        <div className="dropdown dropstart btn-group">
+                            <button id='cart' type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i className="fa-solid fa-bag-shopping"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">IMANE</a></li>
+                                <li><a class="dropdown-item" href="#">IMANE</a></li>
+                                <li><a class="dropdown-item" href="#">IMANE</a></li>
+                                <button id='go-to-cart'><Link to="/cart">View Cart</Link></button> 
+                            </ul>
+                        </div>
+                        {/* hamburger button */}
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                         </button>
