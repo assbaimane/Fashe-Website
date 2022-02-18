@@ -4,26 +4,47 @@
     visibility: none
     opacity: 0
     transition: opacity 0.5s
+    height: 2px
+    width: 100%
     button
-        position: absolute
+
 .product-card
     &:hover
         #card-hover
             visibility: visible
             opacity: 1
+    span
+        position: absolute
+        background-color: #e65540
+        border-radius: 50px
+        padding: 2px 10px
+        margin: 10px
+        color: white
+        font-size: 12px
 
-#add-to-cart
+.btnContainer
+    position: absolute
+    bottom: 20px
+    width: 100%
+    display: flex
+    justify-content: center
+
+#addInCart
     color: white
     background-color: black
     border-radius: 20px
-    padding: 5px 20px
+    padding: 10px 25px
     text-transform: uppercase
     font-size: 14px
-    //transform: translate(30%, -130%)
     transition: opacity 0.5s
+    bottom: 20px
+    margin: auto
+
+
     &:hover
         background-color: #e65540
 #heart
+    position: absolute
     right: 10px
     top: 10px
     color: white
@@ -35,8 +56,8 @@
         text-decoration: none
         color: rgb(86, 86, 86)
         &:hover
-            background-color: #e65540 
+            color: #e65540 
     p
         font-size: 16px
-        padding-bottom: 10px
+        padding-bottom: 35px
         color: rgb(86, 86, 86)
