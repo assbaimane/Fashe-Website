@@ -17,16 +17,16 @@
 - Use "React Router Dom" for navigation:
     X- an "active" class is added to the clicked page
     - the "heart" and "basket" icons are functional.
-    - When clicking on the basket icon, a dropdown appears with the selected items and a summary of each item + the total price (see image in appendix).
+    X- When clicking on the basket icon, a dropdown appears with the selected items and a summary of each item + the total price (see image in appendix).
     - The item number is updated on the basket icon
-    - Via the dropdown, possibility to have access to the basket page
-    - When clicking on the heart icon, you can access the "favorite" page
+    X- Via the dropdown, possibility to have access to the basket page
+    X- When clicking on the heart icon, you can access the "favorite" page
 
 - Each product:
     X- has one/several tags (best seller, new, old, sale) and a category (women, men, kids, accessory)
     - if the product is "new" or "old", a span is added at the top left of the product with the tag in question (see image in appendix)
     - possibility of activating a "sold". The price (-20%) and the display change automatically.
-    - at the over, possibility of adding the product to my basket (add to cart = 1) + possibility of liking the product so that it is automatically added to the "favorite" page
+    X- at the hover, possibility of adding the product to my basket (add to cart = 1) + possibility of liking the product so that it is automatically added to the "favorite" page
     - when you click on the product, a "products-details" page with the product in question and its details is displayed (more details in the next part)
 
 - on the product-detail page is:
@@ -35,9 +35,9 @@
     - possibility to choose size and color in addition
 
 - on the "product" page is
-    - an alert at the top of the page which shows us the number of products on sale
-    - a filter that sorts according to the categories of each product (a sentence is updated each time with the number of products found)
-    - a search bar that filters with product names
+    X- an alert at the top of the page which shows us the number of products on sale
+    X- a filter that sorts according to the categories of each product (a sentence is updated each time with the number of products found)
+    X- a search bar that filters with product names
 
 - on the "basket" page is:
     - all the products added to the basket with their quantities and the total price of each one.
@@ -50,7 +50,7 @@
     - an "add" btn which adds the product in question to the basket and removes it from the favorite page
 
 - on the "home" page is:
-    - a carousel with a btn on it which leads to the product page
+    X- a carousel with a btn on it which leads to the product page
     X- a filter that filters in relation to product tags (maximum 4 products displayed)
 
 X- on the "about" & "contact" page, do as in the images (static)

@@ -3,7 +3,7 @@
 #card-hover
     visibility: none
     opacity: 0
-    transition: opacity 0.3s
+    transition: opacity 0.5s
     button
         position: absolute
 .product-card
@@ -19,8 +19,24 @@
     padding: 5px 20px
     text-transform: uppercase
     font-size: 14px
-    transform: translate(30%, -130%)
+    //transform: translate(30%, -130%)
+    transition: opacity 0.5s
+    &:hover
+        background-color: #e65540
 #heart
     right: 10px
     top: 10px
     color: white
+.products
+    h5
+        padding-top: 20px
+        font-size: 15px
+        font-weight: 400
+        text-decoration: none
+        color: rgb(86, 86, 86)
+        &:hover
+            background-color: #e65540 
+    p
+        font-size: 16px
+        padding-bottom: 10px
+        color: rgb(86, 86, 86)
