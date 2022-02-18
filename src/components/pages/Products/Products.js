@@ -1,6 +1,11 @@
 import './Products.sass';
 import Card from '../../Card/Card';
+import ProductDetail from './ProductDetail/ProductDetail';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 
 function Products(props) {
     //-------------------------- VARIABLES -------------------------
@@ -88,15 +93,15 @@ function Products(props) {
                             {/* --------- Filter : Specific category ---------- */}
                             {products.filter(elem => elem.category === currentCategory).map((element) => {
                                 return (
-                                    <Card
-                                        key={element.id}
-                                        display={"col-md-4"}
-                                        addToBag = {(param) => props.addToBag(param)}
-                                        item={element}
-                                        img={element.src}
-                                        title={element.name}
-                                        price={element.price}
-                                    />
+                                        <Card
+                                            key={element.id}
+                                            display={"col-md-4"}
+                                            addToBag = {(param) => props.addToBag(param)}
+                                            item={element}
+                                            img={element.src}
+                                            title={element.name}
+                                            price={element.price}
+                                        />
                                 )
                             })
                             }
@@ -104,15 +109,15 @@ function Products(props) {
                             {/* --------- Filter : All Category ---------- */}
                             {(currentCategory == "All") && products.map((element) => {
                                 return (
-                                    <Card
-                                        key={element.id}
-                                        display={"col-md-4 pb-4"}
-                                        addToBag = {(param) => props.addToBag(param)}
-                                        item={element}
-                                        img={element.src}
-                                        title={element.name}
-                                        price={element.price}
-                                    />
+                                        <Card
+                                            key={element.id}
+                                            display={"col-md-4"}
+                                            addToBag = {(param) => props.addToBag(param)}
+                                            item={element}
+                                            img={element.src}
+                                            title={element.name}
+                                            price={element.price}
+                                        />
                                 )
                             })
                             }
@@ -126,7 +131,7 @@ function Products(props) {
                                             return (
                                                 <Card
                                                     key={element.id}
-                                                    display={"col-4 pb-4"}
+                                                    display={"col-md-4"}
                                                     addToBag = {(param) => props.addToBag(param)}
                                                     item={element}
                                                     img={element.src}

@@ -1,4 +1,5 @@
 import './Card.sass';
+import { Link } from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import Products from '../pages/Products/Products';
 
@@ -31,7 +32,9 @@ function Card(props){
                     <button id='heart'><i className="fa-solid fa-heart"></i></button>
                 </div>
             </div>
-            <h5>{props.title}</h5>
+            <Link to='/products/productDetail' target="_blank">
+                <h5>{props.title}</h5>
+            </Link>
             <p>${props.price}.00 </p>
         </div>
     );
