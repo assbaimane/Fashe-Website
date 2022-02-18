@@ -20,7 +20,7 @@ function Card(props){
                 {props.item?.state === "New" || props.item?.state === "Old" ? <span>{props.item?.state}</span> : null }
 
                 {/* product photo */}
-                <img className="img-fluid" src={props.img} alt={props.title} />
+                <img className="img-fluid productImg" src={props.img} alt={props.title} />
                 <div id="card-hover">
                     {/* add to cart button */}
                     <div className="btnContainer">
