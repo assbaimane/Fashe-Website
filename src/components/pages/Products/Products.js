@@ -134,7 +134,7 @@ function Products(props) {
                                                 <Card
                                                     key={element.id}
                                                     display={"col-md-4"}
-                                                    addToBag = {(param) => props.addToBag(param)}
+                                                    addToBag = {props.addToBag}
                                                     item={element}
                                                     img={element.src}
                                                     title={element.name}

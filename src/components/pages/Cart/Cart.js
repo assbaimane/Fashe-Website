@@ -4,17 +4,40 @@ import { useState } from 'react';
 
 function Cart(props){
     // --------------------------- VARIABLES ------------------------
-    const [itemsQuantity, setitemsQuantity] = useState(...props.shopBag) 
+    const [itemsQuantity, setitemsQuantity] = useState([...props.shopBag]) 
 
     // --------------------------- FUNCTIONS ------------------------
-    const reduceQuantity = (element,amount) =>{
-        element.quantity--;
-        setitemsQuantity(amount);
+    const deleteProduct = (index) =>{
+        alert("tu essaye de supprimer quelque chose")
+        let copyBag = [...props.shopBag];
+        copyBag.splice(index-1, 1);
+        console.log(copyBag);
+        props.setShopBag(copyBag);
+    }
+    
+    
+    const reduceQuantity = (element, index) =>{
+        if (element.quantity === 1){
+            let deletion = "Do you want to delete "+element.name+" from your shopbag ?"
+            if (window.confirm(deletion)) {
+                deleteProduct(index);
+              } else {
+                console.log("on reste à 1");
+              }
+        }
+        else{
+            let updatedArray = [...props.shopBag];
+            updatedArray[index].quantity--;
+            setitemsQuantity(updatedArray);
+            console.log("Le produit "+ (index+1) + " est "+element.quantity+"x dans le panier");
+        }
     }
 
-    const increaseQuantity = (amount) =>{
-        amount++;
-        setitemsQuantity(amount);
+    const increaseQuantity = (element, index) =>{
+        let updatedArray = [...props.shopBag];
+        updatedArray[index].quantity++;
+        setitemsQuantity(updatedArray);
+        console.log("Le produit "+ (index+1) + " est "+element.quantity+"x dans le panier");
     }
 
     //-------------------------- DISPLAY -------------------------
@@ -46,7 +69,7 @@ function Cart(props){
 
                     <div id ='CartContentItems' className="row">
                         {/* ------ Map all items in the bag to display them ------ */}
-                        {props.shopBag.map((element) => {
+                        {props.shopBag.map((element, index) => {
                             return (
                                 <div className="items row align-items-center justify-content-center align-items-center container text-center m-0">
                                     <div className='col-5 row align-items-center justify-content-center'>
@@ -55,22 +78,13 @@ function Cart(props){
                                     </div>
                                     <p className='col-2'>${element.price}.00</p>
                                     <p className='col-2' id="QuantityButton">
-                                        <button onClick={()=>reduceQuantity(itemsQuantity)}>-</button>
-                                        {/* --- By default --- */}
-                                        {itemsQuantity == null &&
+                                        <button onClick={()=>reduceQuantity(element, index)}>-</button>
                                         <span className='p-1'>
-                                            {/* {setitemsQuantity(element.quantity)} */}
+                                            {element.quantity}
                                         </span>
-                                        }
-                                        {/* --- After + or - items --- */}
-                                        {itemsQuantity !== null &&
-                                        <span className='p-1'>
-                                            {/* {itemsQuantity} */}
-                                        </span>
-                                        }
-                                        <button onClick={()=>increaseQuantity(itemsQuantity)}>+</button>
+                                        <button onClick={()=>increaseQuantity(element, index)}>+</button>
                                     </p>
-                                    <p className='col-3'>${element.price *itemsQuantity}.00</p>
+                                    <p className='col-3'>${element.price * element.quantity}.00</p>
                                 </div>
                             );
                         }

@@ -20,6 +20,7 @@ function App() {
   // --------------------------- FUNCTIONS ------------------------
   const addToBag = (product) =>{
       alert(product.name + "a été ajouté à ton panier !");
+      product.quantity++;
       setShopBag(shopBag => [...shopBag, product]);
   }
 
@@ -46,6 +47,7 @@ function App() {
           <Route path={'/cart'} element={
             <Cart 
                 shopBag = {shopBag}
+                setShopBag = {setShopBag}
             />}/>
         </Routes>
         <Footer/>
