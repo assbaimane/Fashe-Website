@@ -19,9 +19,15 @@ function App() {
 
   // --------------------------- FUNCTIONS ------------------------
   const addToBag = (product) =>{
-      alert(product.name + "a été ajouté à ton panier !");
+    if(shopBag.includes(product)){
+      product.quantity++;
+      alert("La quantité de "+ product.name + " a été mis à jour !");
+    }
+    else{
       product.quantity++;
       setShopBag(shopBag => [...shopBag, product]);
+      alert(product.name + "a été ajouté à ton panier !");
+    }
   }
 
   // --------------------------- DISPLAY ------------------------

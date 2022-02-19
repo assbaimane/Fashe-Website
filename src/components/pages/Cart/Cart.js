@@ -10,7 +10,7 @@ function Cart(props){
     const deleteProduct = (index) =>{
         alert("tu essaye de supprimer quelque chose")
         let copyBag = [...props.shopBag];
-        copyBag.splice(index-1, 1);
+        copyBag.splice(index, 1);
         console.log(copyBag);
         props.setShopBag(copyBag);
     }
