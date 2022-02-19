@@ -118,7 +118,7 @@ function Products(props) {
                                             img={element.src}
                                             title={element.name}
                                             price={element.price}
-                                            setSelectedProduct={(selected) => props.setSelectedProduct(selected)}
+                                            setSelectedProduct={props.setSelectedProduct}
                                         />
                                 )
                             })
@@ -139,7 +139,7 @@ function Products(props) {
                                                     img={element.src}
                                                     title={element.name}
                                                     price={element.price}
-                                                    setSelectedProduct={(selected) => props.setSelectedProduct(selected)}
+                                                    setSelectedProduct={props.setSelectedProduct}
                                                 />
                                             )}
                                         )}

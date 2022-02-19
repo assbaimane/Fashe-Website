@@ -1,12 +1,21 @@
 import './Cart.sass';
-import {useEffect, useState} from 'react';
+import { useState } from 'react';
 
 
 function Cart(props){
-    // // --------------------------- VARIABLES ------------------------
-    
-    // --------------------------- FUNCTIONS ------------------------
+    // --------------------------- VARIABLES ------------------------
+    const [itemsQuantity, setitemsQuantity] = useState(...props.shopBag) 
 
+    // --------------------------- FUNCTIONS ------------------------
+    const reduceQuantity = (element,amount) =>{
+        element.quantity--;
+        setitemsQuantity(amount);
+    }
+
+    const increaseQuantity = (amount) =>{
+        amount++;
+        setitemsQuantity(amount);
+    }
 
     //-------------------------- DISPLAY -------------------------
     return(
@@ -41,16 +50,27 @@ function Cart(props){
                             return (
                                 <div className="items row align-items-center justify-content-center align-items-center container text-center m-0">
                                     <div className='col-5 row align-items-center justify-content-center'>
-                                        <div className="col-3 p-4"><img src={element.src} className="img-fluid" alt={element.name} /></div>
+                                        <div className="col-3 p-1 p-md-3 p-lg-4"><img src={element.src} className="img-fluid" alt={element.name} /></div>
                                         <div className="col-9">{element.name}</div>
                                     </div>
                                     <p className='col-2'>${element.price}.00</p>
                                     <p className='col-2' id="QuantityButton">
-                                        <button>-</button>
-                                        <span className='p-1'>{element.quantity}</span>
-                                        <button>+</button>
+                                        <button onClick={()=>reduceQuantity(itemsQuantity)}>-</button>
+                                        {/* --- By default --- */}
+                                        {itemsQuantity == null &&
+                                        <span className='p-1'>
+                                            {/* {setitemsQuantity(element.quantity)} */}
+                                        </span>
+                                        }
+                                        {/* --- After + or - items --- */}
+                                        {itemsQuantity !== null &&
+                                        <span className='p-1'>
+                                            {/* {itemsQuantity} */}
+                                        </span>
+                                        }
+                                        <button onClick={()=>increaseQuantity(itemsQuantity)}>+</button>
                                     </p>
-                                    <p className='col-3'>${element.price * element.quantity}.00</p>
+                                    <p className='col-3'>${element.price *itemsQuantity}.00</p>
                                 </div>
                             );
                         }

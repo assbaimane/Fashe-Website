@@ -1,4 +1,5 @@
 import './ProductDetail.sass';
+import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 
 function ProductDetail(props) {
@@ -14,6 +15,7 @@ function ProductDetail(props) {
         <>
             <img src="" alt="" />
             <div className="product-info">
+                // props.selectedProduct is the product you clicked on, props.selectedProduct.key permite you to read the value
                 <h1>{console.log(props.selectedProduct)}</h1>
                 <h2>{props.selectedProduct.price}</h2>
                 <p>description</p>
