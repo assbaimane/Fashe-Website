@@ -22,6 +22,7 @@ function Cart(props){
             let deletion = "Do you want to delete "+element.name+" from your shopbag ?"
             if (window.confirm(deletion)) {
                 deleteProduct(index);
+                setTotalPrice(totalPrice => (totalPrice - element.price));
               } else {
                 console.log("on reste à 1");
               }
@@ -30,6 +31,7 @@ function Cart(props){
             let updatedArray = [...props.shopBag];
             updatedArray[index].quantity--;
             setitemsQuantity(updatedArray);
+            setTotalPrice(totalPrice => (totalPrice - element.price));
             console.log("Le produit "+ (index+1) + " est "+element.quantity+"x dans le panier");
         }
     }
@@ -38,17 +40,18 @@ function Cart(props){
         let updatedArray = [...props.shopBag];
         updatedArray[index].quantity++;
         setitemsQuantity(updatedArray);
+        setTotalPrice(totalPrice => (totalPrice + element.price));
         console.log("Le produit "+ (index+1) + " est "+element.quantity+"x dans le panier");
     }
 
-    useEffect(() =>{
+    useEffect(() =>{ //Wait for all element to display before to calcul the total price
         setTimeout(
             props.shopBag.map((element) => {
                 return(
-                    setTotalPrice((totalPrice + (element.price * element.quantity)))
+                    setTotalPrice(totalPrice => (totalPrice + (element.price * element.quantity)))
                 );
             })
-        , 2000);
+        ,2000);
     },[])
 
     //-------------------------- DISPLAY -------------------------
