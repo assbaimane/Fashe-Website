@@ -34,7 +34,9 @@ function Card(props){
             <Link onClick={() => {props.setSelectedProduct(props.item)}} to='/products/productDetail'>
                 <h5>{props.title}</h5>
             </Link>
-            <p>${props.price}.00 </p>
+            <p> 
+                {/* ---- If item is in sale, 20% on and old price is striked, else : display price */}
+            {props.item?.state === "Sale" ? <span className='text-danger'><strike className="text-dark">${props.price}.00</strike>  ${(props.item?.price*0.8)}.00</span> : <span>${props.price}.00</span>  }</p>
         </div>
     );
 }
