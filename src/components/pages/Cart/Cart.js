@@ -51,7 +51,7 @@ function Cart(props){
             {/* ---------------------- EMPTY BAG ---------------------- */}
             {props.shopBag  == "" &&
                 <div className="row justify-content-center align-items-center text-center container mx-auto my-auto p-5">
-                    <h1>Ton panier est vide</h1>
+                    <h2>Ton panier est vide</h2>
                     <p>Tu n'as encore aucun article dans ton panier</p>
                 </div>
             }

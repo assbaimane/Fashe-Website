@@ -28,7 +28,7 @@ function Card(props){
                     </div>
 
                     {/* like button */}
-                    <button id='heart'><i className="fa-solid fa-heart"></i></button>
+                    <button id='heart'><i className="fa-solid fa-heart" onClick={() => props.addToFav(props.item)}></i></button>
                 </div>
             </div>
             <Link onClick={() => {props.setSelectedProduct(props.item)}} to='/products/productDetail'>

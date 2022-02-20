@@ -15,6 +15,7 @@ import Footer from './components/Footer/Footer'
 function App() {
   // --------------------------- DATA ------------------------
   const [shopBag, setShopBag] = useState([])  
+  const [favBag, setFavBag] = useState([])  
   const [selectedProduct, setSelectedProduct] = useState([])  
 
   // --------------------------- FUNCTIONS ------------------------
@@ -30,6 +31,24 @@ function App() {
     }
   }
 
+  const addToFav = (product)=>{
+    if(favBag.includes(product)){
+      alert(product.name + " a déjà été ajouté à favoris !");
+    }
+    else{
+      setFavBag(favBag => [...favBag, product]);
+      alert(product.name + "a été ajouté au favoris !");
+    }
+  }
+
+  const fromFavToBag = (product,index) =>{
+    addToBag(product);
+    // Delete the item from fav (after adding it to bag)
+    let copyFav = [...favBag];
+    copyFav.splice(index, 1);
+    setFavBag(copyFav);
+  }
+
   // --------------------------- DISPLAY ------------------------
   return (
     <div className='App'>
@@ -40,6 +59,7 @@ function App() {
           <Route path={'/products'} element={
               <Products 
                   addToBag = {addToBag}
+                  addToFav = {addToFav}
                   setSelectedProduct = {setSelectedProduct}
               />}/>
           <Route path={'/products/productDetail'} element={<ProductDetail 
@@ -49,7 +69,11 @@ function App() {
           </Route>
           <Route path={'/about'} element={<About />}/>
           <Route path={'/contact'} element={<Contact />}/>
-          <Route path={'/fav'} element={<Fav />}/>
+          <Route path={'/fav'} element={
+            <Fav 
+                favBag = {favBag}
+                fromFavToBag = {fromFavToBag}
+            />}/>
           <Route path={'/cart'} element={
             <Cart 
                 shopBag = {shopBag}
