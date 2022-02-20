@@ -1,10 +1,11 @@
 import './Cart.sass';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 function Cart(props){
     // --------------------------- VARIABLES ------------------------
-    const [itemsQuantity, setitemsQuantity] = useState([...props.shopBag]) 
+    const [itemsQuantity, setitemsQuantity] = useState([...props.shopBag])
+    const [totalPrice, setTotalPrice] = useState(0);
 
     // --------------------------- FUNCTIONS ------------------------
     const deleteProduct = (index) =>{
@@ -40,6 +41,16 @@ function Cart(props){
         console.log("Le produit "+ (index+1) + " est "+element.quantity+"x dans le panier");
     }
 
+    useEffect(() =>{
+        setTimeout(
+            props.shopBag.map((element) => {
+                return(
+                    setTotalPrice((totalPrice + (element.price * element.quantity)))
+                );
+            })
+        , 2000);
+    },[])
+
     //-------------------------- DISPLAY -------------------------
     return(
         <>
@@ -60,6 +71,7 @@ function Cart(props){
             {/* ----------  CARTCONTENT ---------- */}
             {props.shopBag != "" &&
                 <div id='CartContent' className='m-5'>
+                    {/* ------------ Products Column Title --------------- */}
                     <div id ='CartContentTitle' className="row d-flex align-items-center justify-content-center container text-center m-0">
                         <p className='col-5'>Product</p>
                         <p className='col-2'>Price</p>
@@ -67,6 +79,7 @@ function Cart(props){
                         <p className='col-3'>Total</p>
                     </div>
 
+                    {/* -------------------- Products -------------------- */}
                     <div id ='CartContentItems' className="row">
                         {/* ------ Map all items in the bag to display them ------ */}
                         {props.shopBag.map((element, index) => {
@@ -84,11 +97,17 @@ function Cart(props){
                                         </span>
                                         <button onClick={()=>increaseQuantity(element, index)}>+</button>
                                     </p>
-                                    <p className='col-3'>${element.price * element.quantity}.00</p>
+                                    <p className='col-3'>${(element.quantity * element.price)}.00</p>
                                 </div>
                             );
                         }
                         )}
+                    </div>
+
+                    {/* ----------- Total price ----------- */}
+                    <div className="total row mt-3 offset-6 col-6 align-items-center">
+                        <p className='col-4'>Total : $<span>{totalPrice}.00</span></p>
+                        <button className='col-8 bg-dark text-light rounded'>Proceed to payement</button>
                     </div>
                 </div>
             }
