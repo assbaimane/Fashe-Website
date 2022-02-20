@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 
 
-function Header(){
+function Header(props){
     // --------------- VARIABLES -----------------
     const [page, setPage] = useState("home");
 
@@ -45,10 +45,20 @@ function Header(){
                                 <i className="fa-solid fa-bag-shopping"></i>
                             </button>
                             <ul className="dropdown-menu dropdown-menu-end">
-                                <li><a className="dropdown-item" href="#">IMANE</a></li>
-                                <li><a className="dropdown-item" href="#">IMANE</a></li>
-                                <li><a className="dropdown-item" href="#">IMANE</a></li>
-                                <button id='go-to-cart'><Link to="/cart">View Cart</Link></button> 
+                                {props.shopBag.map((element) => {
+                                    return (
+                                        <li><a className="dropdown-item" href="#">
+                                            <div className="productPreview row align-items-center">
+                                                <div className="col-4"><img className='img-fluid' src={element.src} alt="" /></div>
+                                                <div className="col-8">
+                                                    <div className="row d-flex "><p>{element.name}</p></div>
+                                                    <div className="row">{element.quantity}x${element.price}.00</div>
+                                                </div>
+                                            </div>    
+                                        </a></li>
+                                    )}
+                                )}
+                            <button id='go-to-cart'><Link to="/cart">View Cart</Link></button> 
                             </ul>
                         </div>
                         {/* hamburger button */}

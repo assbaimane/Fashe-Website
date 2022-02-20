@@ -53,7 +53,9 @@ function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <Header/>
+        <Header
+            shopBag = {shopBag}
+        />
         <Routes>
           <Route path={'/'} element={<Home />}/>
           <Route path={'/products'} element={
