@@ -15,7 +15,7 @@ function Card(props){
     // ----------------------------- VIEW ---------------------------
     return(
         <div className="products mx-auto my-auto" className={props.display}>
-            <div className="product-card">
+            <div className="product-card pb-3">
                 {/* product status button */}
                 {props.item?.state === "New" || props.item?.state === "Old" ? <span>{props.item?.state}</span> : null }
 
