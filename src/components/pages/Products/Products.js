@@ -151,7 +151,6 @@ function Products(props) {
                             }
                         </div>
                     </div>
-
                 </div>
             </div>
         </>

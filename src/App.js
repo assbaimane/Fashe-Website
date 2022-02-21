@@ -53,7 +53,9 @@ function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <Header/>
+        <Header
+            shopBag = {shopBag}
+        />
         <Routes>
           <Route path={'/'} element={<Home />}/>
           <Route path={'/products'} element={
@@ -65,7 +67,6 @@ function App() {
           <Route path={'/products/productDetail'} element={<ProductDetail 
               selectedProduct = {selectedProduct}
           />} >
-            <Route path={':id'} />
           </Route>
           <Route path={'/about'} element={<About />}/>
           <Route path={'/contact'} element={<Contact />}/>

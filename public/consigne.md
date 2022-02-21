@@ -27,7 +27,7 @@
     X- if the product is "new" or "old", a span is added at the top left of the product with the tag in question (see image in appendix)
     - possibility of activating a "sold". The price (-20%) and the display change automatically.
     X- at the hover, possibility of adding the product to my basket (add to cart = 1) + possibility of liking the product so that it is automatically added to the "favorite" page
-    - when you click on the product, a "products-details" page with the product in question and its details is displayed (more details in the next part)
+    X- when you click on the product, a "products-details" page with the product in question and its details is displayed (more details in the next part)
 
 - on the product-detail page is:
     - the data of the clicked product (image, name, price, description, category)
@@ -40,14 +40,14 @@
     X- a search bar that filters with product names
 
 - on the "basket" page is:
-    - all the products added to the basket with their quantities and the total price of each one.
-    - possibility to change the quantity and the price adapts automatically
+    X- all the products added to the basket with their quantities and the total price of each one.
+    X- possibility to change the quantity and the price adapts automatically
     - the final price that the user will have to pay for all the items in the basket
 
 - on the "favorite" page is:
-    - the same result as the "basket" page with two different loans.
-    - the final price of all products is no longer there
-    - an "add" btn which adds the product in question to the basket and removes it from the favorite page
+    X- the same result as the "basket" page with two different loans.
+    X- the final price of all products is no longer there
+    X- an "add" btn which adds the product in question to the basket and removes it from the favorite page
 
 - on the "home" page is:
     X- a carousel with a btn on it which leads to the product page
