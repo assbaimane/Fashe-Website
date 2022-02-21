@@ -72,19 +72,19 @@ function Cart(props){
                         {props.shopBag.map((element, index) => {
                             return (
                                 <div className="items row align-items-center justify-content-center align-items-center container text-center m-0">
-                                    <div className='col-5 row align-items-center justify-content-center'>
+                                    <div className='col-md-5 col-12 row align-items-center justify-content-center'>
                                         <div className="col-3 p-1 p-md-3 p-lg-4"><img src={element.src} className="img-fluid" alt={element.name} /></div>
                                         <div className="col-9">{element.name}</div>
                                     </div>
-                                    <p className='col-2'>${element.price}.00</p>
-                                    <p className='col-2' id="QuantityButton">
+                                    <p className='col-md-2 col-4'>${element.price}.00</p>
+                                    <p className='col-md-2 col-4' id="QuantityButton">
                                         <button onClick={()=>reduceQuantity(element, index)}>-</button>
                                         <span className='p-1'>
                                             {element.quantity}
                                         </span>
                                         <button onClick={()=>increaseQuantity(element, index)}>+</button>
                                     </p>
-                                    <p className='col-3'>${element.price * element.quantity}.00</p>
+                                    <p className='col-md-3 col-4'>${element.price * element.quantity}.00</p>
                                 </div>
                             );
                         }

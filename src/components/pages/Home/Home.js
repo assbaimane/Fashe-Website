@@ -91,7 +91,7 @@ function Home() {
                 </div>
 
                 {/* ---------------- Products ---------------- */}
-                <div className="row">
+                <div className="product-row row">
                     {products.filter(elem => elem.state === currentProduct).map((element) => {
                         return (
                             <Card
