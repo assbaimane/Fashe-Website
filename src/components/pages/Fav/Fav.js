@@ -43,7 +43,7 @@ function Fav(props){
                                         <div className="col-9">{element.name}</div>
                                     </div>
                                     <p className='col-2'>${element.price}.00</p>
-                                    <button className='col-4' onClick={() =>props.fromFavToBag(element,index)}>Add to Bag </button>
+                                    <button className='offset-2 col-2' onClick={() =>props.fromFavToBag(element,index)}>Add to Bag </button>
                                 </div>
                             );
                         }
