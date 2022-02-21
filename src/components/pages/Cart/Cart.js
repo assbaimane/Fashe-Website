@@ -76,10 +76,10 @@ function Cart(props){
                 <div id='CartContent' className='m-5'>
                     {/* ------------ Products Column Title --------------- */}
                     <div id ='CartContentTitle' className="row d-flex align-items-center justify-content-center container text-center m-0">
-                        <p className='col-5'>Product</p>
-                        <p className='col-2'>Price</p>
-                        <p className='col-2'>Quantity</p>
-                        <p className='col-3'>Total</p>
+                        <p className='col-md-5 col-12'>Product</p>
+                        <p className='col-md-2 col-3'>Price</p>
+                        <p className='col-md-2 col-6'>Quantity</p>
+                        <p className='col-md-3 col-3'>Total</p>
                     </div>
 
                     {/* -------------------- Products -------------------- */}
@@ -109,8 +109,8 @@ function Cart(props){
 
                     {/* ----------- Total price ----------- */}
                     <div className="total row mt-3 offset-6 col-6 align-items-center">
-                        <p className='col-4'>Total : $<span>{totalPrice}.00</span></p>
-                        <button className='col-8 bg-dark text-light rounded'>Proceed to payement</button>
+                        <p className='col-md-4'>Total : $<span>{totalPrice}.00</span></p>
+                        <button className='col-md-8 bg-dark text-light rounded'>Proceed to payement</button>
                     </div>
                 </div>
             }
